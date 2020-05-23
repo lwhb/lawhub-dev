@@ -15,7 +15,14 @@ sqlite-devel openssl-devel xz xz-devel libffi-devel findutils
 mkdir lawhub && cd lawhub
 git clone https://github.com/lwhb/lawhub-dev.git
 ```
-You can use a different parent directory name instead of lawhub if you want.
+You can use a different root directory name instead of lawhub if you want.
+
+### Environment variables
+```
+echo "export LAWHUB_ROOT=$PWD" >> ~/.bash_profile
+echo "export LAWHUB_DATA=$PWD/data" >> ~/.bash_profile
+```
+Crawled data will be stored under LAWHUB_DATA.
 
 ### Python
 ```
