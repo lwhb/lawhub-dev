@@ -10,6 +10,7 @@ jupyterlab = "*"
 mecab-python3 = "*"
 scrapy = "*"
 pandas = "*"
+tqdm = "*"
 
 [requires]
 python_version = "3.8"
