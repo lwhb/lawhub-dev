@@ -1,4 +1,4 @@
-repos=("lawhub" "lawhub-xml" "lawhub-spider" "lawhub-tool" )
+repos=("lawhub" "lawhub-xml" "lawhub-spider" "lawhub-tool" "lwhb.github.io" )
 for ri in "${!repos[@]}"; do
     repo=${repos[$ri]}
     if [ ! -d ../$repo ]; then
