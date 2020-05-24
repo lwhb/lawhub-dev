@@ -14,13 +14,13 @@ pip install --user pipenv
 ```
 
 ## pyenv
-Need to install build dependencies first ([pyenv wiki](https://github.com/pyenv/pyenv/wiki/common-build-problems])):
+First needed to install build dependencies listed in [common-build-problems](https://github.com/pyenv/pyenv/wiki/common-build-problems]):
 ```
 sudo yum install @development zlib-devel bzip2 bzip2-devel readline-devel sqlite \
 sqlite-devel openssl-devel xz xz-devel libffi-devel findutils
 ```
 
-And follow basic installation guide in [README.md](https://github.com/pyenv/pyenv/):
+And followed basic installation guide in [README.md](https://github.com/pyenv/pyenv/):
 ```
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
