@@ -4,12 +4,6 @@ Master repository to manage LawHub project development environment
 * pyenv
 * pipenv
 
-Note that you first need to install following libraries to build pyenv on a minimum AWS instance ([pyenv wiki](https://github.com/pyenv/pyenv/wiki/common-build-problems])):
-```
-sudo yum install @development zlib-devel bzip2 bzip2-devel readline-devel sqlite \
-sqlite-devel openssl-devel xz xz-devel libffi-devel findutils
-```
-
 ## Setup
 ```
 mkdir lawhub && cd lawhub
