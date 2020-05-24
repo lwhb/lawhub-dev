@@ -16,7 +16,7 @@ You can use a different root directory name instead of lawhub if you want.
 echo "export LAWHUB_ROOT=$PWD" >> ~/.bash_profile
 echo "export LAWHUB_DATA=$PWD/data" >> ~/.bash_profile
 ```
-You can use a diffrent data directory for LAWHUB_DATA. Crawled data will be stored here.
+You can use a diffrent a directory for LAWHUB_DATA, under which crawled/processed data will be stored.
 
 ### Python
 ```
