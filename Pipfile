@@ -11,6 +11,9 @@ mecab-python3 = "*"
 scrapy = "*"
 pandas = "*"
 tqdm = "*"
+gitpython = "*"
+pygithub = "*"
+kanjize = "*"
 
 [requires]
 python_version = "3.8"
