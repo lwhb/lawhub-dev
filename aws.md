@@ -39,3 +39,27 @@ Configured daily cron job as follows:
 ```
 0 0 * * * /home/ec2-user/lawhub/lawhub-tool/cron_daily.sh &> /home/ec2-user/lawhub/data/log/cron_daily.log
 ```
+
+## CloudWatch
+Set up CloudWatchAgent to send logs from CloudWatch
+
+```
+wget https://s3.amazonaws.com/amazoncloudwatch-agent/amazon_linux/amd64/latest/amazon-cloudwatch-agent.rpm
+sudo rpm -U ./amazon-cloudwatch-agent.rpm
+
+# set IAM credentials with CloudWatchAgentServerPolicy
+sudo vi /opt/aws/amazon-cloudwatch-agent/etc/common-config.toml
+
+# configure log files to send
+sudo vi /opt/aws/amazon-cloudwatch-agent/bin/config.json
+
+# activate CloudWatchAgent
+sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m onPremise -c file:/opt/aws/amazon-cloudwatch-agent/bin/config.json -s
+
+# check CloudWatchAgent log
+less -S /var/log/amazon/amazon-cloudwatch-agent/amazon-cloudwatch-agent.log
+```
+
+* https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/installing-cloudwatch-agent-commandline.html
+* https://blog.asterism.xyz/posts/2019-07-25/
+* https://blog.d-shimizu.io/article/1836
